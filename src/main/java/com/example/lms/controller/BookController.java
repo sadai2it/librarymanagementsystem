@@ -64,7 +64,7 @@ public class BookController {
 	        Book book = bookService.updateBookByName(bookId, bookName);
 
 	        if (book == null) {
-	            return new ResponseEntity<>("The book which you are searching for is not there", HttpStatus.NOT_FOUND);
+	            return new ResponseEntity<>("The book which you are searching is currently not there", HttpStatus.NOT_FOUND);
 	        }
 
 	        return new ResponseEntity<>(book.getBookName(), HttpStatus.ACCEPTED);
